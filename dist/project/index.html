@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>F-Alpha</title>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="libs/jquery.js"></script>
+    <script type="module" src="MyScene.js"></script>    
+    
+    <script type="text/javascript" src='libs/three.min.js'></script>
+  
+    
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden; 
+        } 
+
+        .laps{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            padding: 30px;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .velocidad{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            text-align: center;
+            bottom: 20px;
+            right: 35%;
+            left: 35%;
+            padding: 30px;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+        .crono{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 30px;
+            top: 80px;
+            padding: 30px;
+            width: 25%;
+            height: auto;
+            overflow: hidden;
+        }
+        .minutos{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 250px;
+            
+        }
+        .min{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 230px;
+            top: 20px
+            
+        }
+        .segundos{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 160px;
+            
+        }
+        .seg{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 150px;
+            top: 20px;
+            
+        }
+
+        .milisegundos{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 40px;
+            
+        }
+        .crono2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 30px;
+            top: 120px;
+            padding: 30px;
+            width: 25%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .minutos2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 250px;
+            
+        }
+        .min2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 230px;
+            top: 20px
+            
+        }
+        .segundos2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 160px;
+            
+        }
+        .seg2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 150px;
+            top: 20px;
+            
+        }
+
+        .milisegundos2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 40px;
+            
+        }
+        .loading{
+            color: aliceblue;
+            background-color: black;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+
+        }
+        div.hidden{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">Loading...</div>
+    <div id="WebGL-output">
+    </div>
+<div id="inicio" class="hidden"></span>Haz click en la nave para empezar</div>
+<div id="hud" class="hidden">
+    <div class="laps">Lap: <span id="vuelta"></span>/3</div>
+    <div class="crono">Time: <span class="minutos" id="minutos"></span> <div class="min">'</div> <span class="segundos" id="segundos"></span> <div class="seg">''</div> <span class="milisegundos" id="milisegundos"></span></div>
+    <div class="crono2">Lap time: <span class="minutos2" id="minutos2"></span> <div class="min2">'</div> <span class="segundos2" id="segundos2"></span> <div class="seg2">''</div> <span class="milisegundos2" id="milisegundos2"></span></div>
+    <div class="velocidad"> <span id="velocidad"> </span>Km/h</div>
+    
+    <div id="arrow" style="position: absolute; left: 100px; top: 100px; font-size: x-large; font-weight: bold;"></div>
+</div>
+
+<!-- Div which will show statistical information -->
+<div id="Stats-output">
+</div>
+
+<!-- Div which will hold the Output -->
+
+</body>
+</html>
