@@ -204,6 +204,12 @@ class firestingray extends THREE.Object3D {
       that.choque.setLoop(true);
       that.choque.setVolume(0.2);
     });
+    this.win1 = new THREE.Audio(listener);
+    musicaLoader.load('audio/win.ogg', function(buffer){
+      that.win1.setBuffer(buffer);
+      that.win1.setLoop(true);
+      that.win1.setVolume(0.5);
+    });
 
   }
 
@@ -579,6 +585,7 @@ class firestingray extends THREE.Object3D {
     }
 
     if(this.contador == 100){
+      document.getElementById("Lose").className = "";
       this.gameover.play();
       this.contador = 101;
     }
@@ -598,6 +605,14 @@ class firestingray extends THREE.Object3D {
       this.fuegoizq.scale.set(0,0,0);
       this.fuegoder.scale.set(0,0,0);
     }
+  }
+
+  win(){
+    this.win1.play();
+    this.musica.pause();
+    this.motor.pause();
+    this.choque.pause();
+    
   }
 } 
 
