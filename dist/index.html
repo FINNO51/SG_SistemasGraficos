@@ -182,6 +182,171 @@
         div.hidden{
             display: none;
         }
+        div.loseHidden{
+            display:none
+        }
+
+        .blancoYnegro{
+            color: aliceblue;
+            backdrop-filter: grayscale(100%);
+            position: absolute;
+            top: 1px;
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        .sepia{
+            color: aliceblue;
+            backdrop-filter: sepia(100%);
+            position: absolute;
+            top: 1px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cuadrado{
+            background-color: black;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 45em;
+            height: 55em;
+            transform: translate(-50%, -50%);
+        }
+
+        .textoDerrota{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 60px;
+            font-weight: 100;
+            position: absolute;
+            text-align: center;
+            right: 40%;
+            left: 40%;
+            top: 20%;
+            
+        }
+        .textoVictoria{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 60px;
+            font-weight: 100;
+            position: absolute;
+            text-align: center;
+            right: 40%;
+            left: 40%;
+            top: 10%;
+            
+        }
+        
+
+        .textoReintentar{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 45%;
+            left: 45%;
+            top: 40%;
+        }
+        .textoReintentar2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 45%;
+            left: 45%;
+            top: 70%;
+        }
+        .boton{
+            background-color: black;
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 35px;
+            padding: 30px;
+            position: absolute;
+            right: 45%;
+            left: 45%;
+            top: 50%;
+        }
+
+        .boton:hover{
+            background-color: red;
+        }
+        .boton2{
+            background-color: black;
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 35px;
+            padding: 30px;
+            position: absolute;
+            right: 45%;
+            left: 45%;
+            top: 80%;
+        }
+
+        .boton2:hover{
+            background-color: red;
+        }
+
+        .lap1{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 45%;
+            top: 20%;
+            padding: 30px;
+            width: auto;
+            height: auto;
+            
+        }
+        .lap2{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 45%;
+            top: 30%;
+            padding: 30px;
+            width: auto;
+            height: auto;
+            
+        }
+        .lap3{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 45%;
+            top: 40%;
+            padding: 30px;
+            width: auto;
+            height: auto;
+            
+        }
+        .total{
+            color: aliceblue;
+            font-family: 'Audiowide';
+            font-size: 40px;
+            font-weight: 100;
+            position: absolute;
+            right: 45%;
+            top: 50%;
+            padding: 30px;
+            width: auto;
+            height: auto;
+            
+        }
+        .hiddenWin{
+            display: none;
+        }
         
     </style>
 </head>
@@ -189,12 +354,40 @@
     <div class="loading" id="loading">Loading...</div>
     <div id="WebGL-output">
     </div>
-<div id="inicio" class="hidden"></span>Haz click en la nave para empezar</div>
+<div id="inicio" class="hidden">
+    <div class="laps">Espacio para acelerar</div>
+    <div class="crono">A-D para girar</div>
+    <div class="crono2">← → para derrapar</div>
+    <div class="velocidad">Haz click en la nave para empezar</div>
+</div>
 <div id="hud" class="hidden">
     <div class="laps">Lap: <span id="vuelta"></span>/3</div>
     <div class="crono">Time: <span class="minutos" id="minutos"></span> <div class="min">'</div> <span class="segundos" id="segundos"></span> <div class="seg">''</div> <span class="milisegundos" id="milisegundos"></span></div>
     <div class="crono2">Lap time: <span class="minutos2" id="minutos2"></span> <div class="min2">'</div> <span class="segundos2" id="segundos2"></span> <div class="seg2">''</div> <span class="milisegundos2" id="milisegundos2"></span></div>
     <div class="velocidad"> <span id="velocidad"> </span>Km/h</div>
+    
+    <div id="arrow" style="position: absolute; left: 100px; top: 100px; font-size: x-large; font-weight: bold;"></div>
+</div>
+
+<div id="Lose" class="loseHidden">
+    <div class="blancoYnegro"></div>
+    <div class="cuadrado"></div>
+        <div class="textoDerrota">YOU LOOSE</div>
+        <div class="textoReintentar">Replay?</div>
+        <button class="boton" onClick="window.location.reload();">Yes</button>
+    
+</div>
+
+<div id="win" class="hiddenWin">
+    <div class="sepia"></div>
+    <div class="cuadrado"></div>
+    <div class="textoVictoria">YOU WIN</div>
+    <div class="lap1">Lap 1: <span id="minutos3"></span>'<span  id="segundos3"></span>''<span  id="milisegundos3"></span></div>
+    <div class="lap2">Lap 2: <span id="minutos4"></span>'<span  id="segundos4"></span>''<span  id="milisegundos4"></span></div>
+    <div class="lap3">Lap 3: <span id="minutos5"></span>'<span  id="segundos5"></span>''<span  id="milisegundos5"></span></div>
+    <div class="total">Total Time: <span id="minutosT"></span>'<span id="segundosT"></span>''<span id="milisegundosT"></span></div>
+    <div class="textoReintentar2">Replay?</div>
+        <button class="boton2" onClick="window.location.reload();">Yes</button>
     
     <div id="arrow" style="position: absolute; left: 100px; top: 100px; font-size: x-large; font-weight: bold;"></div>
 </div>

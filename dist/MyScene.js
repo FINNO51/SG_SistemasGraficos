@@ -76,6 +76,8 @@ class MyScene extends THREE.Scene {
     this.empezado = false;
    
     this.unavez = false;
+    this.fin = false;
+    this.finMusica = false;
 
     this.tiempos = Array();
 
@@ -422,6 +424,7 @@ class MyScene extends THREE.Scene {
           that.remove(that.nave2);
           that.empezado = true;
           document.getElementById("hud").className = "";
+          
           that.numero.scale.set(0,0);
           that.nave1.go.play();
 
@@ -476,7 +479,7 @@ class MyScene extends THREE.Scene {
   createCamera () {
     this.nave1.createCamera(this.renderer);
   }
-  
+
   createLights () {
     // Se crea una luz ambiental, evita que se vean complentamente negras las zonas donde no incide de manera directa una fuente de luz
     // La luz ambiental solo tiene un color y una intensidad
@@ -584,7 +587,7 @@ class MyScene extends THREE.Scene {
       var elem = document.getElementById("loading");
       elem.parentNode.removeChild(elem);
       this.noBorrado = false;
-      document.getElementById("inicio").className = "velocidad";
+      document.getElementById("inicio").className = "";
     }
 
     if (this.activarVideos){
@@ -625,7 +628,10 @@ class MyScene extends THREE.Scene {
       document.getElementById("segundos2").innerHTML = this.segundos2;
       document.getElementById("milisegundos2").innerHTML = this.milisegundos2;
 
-      this.milisegundos += 16;
+      if(!this.fin){
+        this.milisegundos += 16;
+      }
+      
       if (this.milisegundos > 999){
         this.segundos += 1;
         this.milisegundos = 0;
@@ -645,7 +651,7 @@ class MyScene extends THREE.Scene {
         this.segundos2 = 0;
       }
 
-      if(!this.explota){
+      if(!this.explota && !this.fin){
         if(this.sobrecircuito){
           this.movimiento();
           this.nave1.inclinacionPorVirar(this.directions[37], this.directions[39]);
@@ -694,6 +700,11 @@ class MyScene extends THREE.Scene {
           this.minutos2 = this.segundos2 = this.milisegundos2 = 0;
         }
 
+        if (this.vuelta == 4){
+          this.fin = true;
+          this.finMusica= true;
+        }
+
         if(this.boost && !this.sigueenturbo){
           this.nave1.contador2 = 0;
           this.vueltaDisponible = true;
@@ -732,8 +743,35 @@ class MyScene extends THREE.Scene {
           this.nave1.translateOnAxis(new THREE.Vector3(1,0,0).normalize(), -0.3);
         }
       }
-      else{
-        this.nave1.animacionExplotar();
+      else if(this.fin){
+        document.getElementById("hud").className = "hidden";
+        document.getElementById("win").className = "";
+
+        document.getElementById("minutos3").innerHTML = this.tiempos[0];
+        document.getElementById("segundos3").innerHTML = this.tiempos[1];
+        document.getElementById("milisegundos3").innerHTML = this.tiempos[2];
+
+        document.getElementById("minutos4").innerHTML = this.tiempos[3];
+        document.getElementById("segundos4").innerHTML = this.tiempos[4];
+        document.getElementById("milisegundos4").innerHTML = this.tiempos[5];
+
+        document.getElementById("minutos5").innerHTML = this.tiempos[6];
+        document.getElementById("segundos5").innerHTML = this.tiempos[7];
+        document.getElementById("milisegundos5").innerHTML = this.tiempos[8];
+
+        document.getElementById("minutosT").innerHTML = this.minutos;
+        document.getElementById("segundosT").innerHTML = this.segundos;
+        document.getElementById("milisegundosT").innerHTML = this.milisegundos;
+
+
+        if (this.finMusica){
+          this.nave1.win();
+          this.finMusica=false;
+        }
+
+      }else{
+        this.nave1.animacionExplotar(document.getElementById);
+
       }
     }
   }else{
