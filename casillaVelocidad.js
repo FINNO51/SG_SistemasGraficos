@@ -1,6 +1,4 @@
-import * as THREE from '../libs/three.module.js'
-import { MTLLoader } from '../libs/MTLLoader.js'
-import { OBJLoader } from '../libs/OBJLoader.js'
+import * as THREE from './libs/three.module.js'
  
 class casillaVelocidad extends THREE.Object3D {
     constructor(gui,titleGui) {

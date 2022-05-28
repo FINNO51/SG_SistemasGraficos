@@ -1,7 +1,7 @@
-import * as THREE from '../libs/three.module.js'
-import { MTLLoader } from '../libs/MTLLoader.js'
-import { OBJLoader } from '../libs/OBJLoader.js'
-import { TrackballControls } from '../libs/TrackballControls.js'
+import * as THREE from './libs/three.module.js'
+import { MTLLoader } from './libs/MTLLoader.js'
+import { OBJLoader } from './libs/OBJLoader.js'
+import { TrackballControls } from './libs/TrackballControls.js'
  
 class firestingray extends THREE.Object3D {
   constructor() {
@@ -17,10 +17,10 @@ class firestingray extends THREE.Object3D {
     this.modelo = new THREE.Object3D();
     var materialLoader = new MTLLoader();
     var objectLoader = new OBJLoader();
-    materialLoader.load ('../models/firestingray/nave.mtl',
+    materialLoader.load ('./models/firestingray/nave.mtl',
        function (materials) {
           objectLoader.setMaterials(materials);
-          objectLoader.load('../models/firestingray/nave.obj',
+          objectLoader.load('./models/firestingray/nave.obj',
              function (object) {
                 that.modelo.add(object);
                 object.recieveShadow = true;
@@ -34,10 +34,10 @@ class firestingray extends THREE.Object3D {
     this.modelo.aleron = new THREE.Object3D();
     var materialLoader2 = new MTLLoader();
     var objectLoader2 = new OBJLoader();
-    materialLoader2.load ('../models/firestingray/aleron.mtl',
+    materialLoader2.load ('./models/firestingray/aleron.mtl',
       function (materials2) {
           objectLoader2.setMaterials(materials2);
-          objectLoader2.load('../models/firestingray/aleron.obj',
+          objectLoader2.load('./models/firestingray/aleron.obj',
             function (object) {
                 that.modelo.aleron.add(object);
                 // modelo.rotateX(-Math.PI/2);
