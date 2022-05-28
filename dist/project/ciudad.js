@@ -1,6 +1,6 @@
-import * as THREE from '../libs/three.module.js'
-import {MTLLoader} from '../libs/MTLLoader.js'
-import {OBJLoader} from '../libs/OBJLoader.js'
+import * as THREE from './libs/three.module.js'
+import {MTLLoader} from './libs/MTLLoader.js'
+import {OBJLoader} from './libs/OBJLoader.js'
 
 
 class Ciudad extends THREE.Object3D {
@@ -10,10 +10,10 @@ class Ciudad extends THREE.Object3D {
       this.modelo = new THREE.Object3D();
       var materialLoader = new MTLLoader();
       var objectLoader = new OBJLoader();
-      materialLoader.load ('../models/ciudad/material.mtl',
+      materialLoader.load ('./models/ciudad/material.mtl',
          function (materials) {
             objectLoader.setMaterials(materials);
-            objectLoader.load('../models/ciudad/my_city_0.obj',
+            objectLoader.load('./models/ciudad/my_city_0.obj',
                function (object) {
                   object.castShadow = true;
                   that.modelo.add(object);
