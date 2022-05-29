@@ -1,4 +1,4 @@
-# Memoria proyecto F-Alpha
+# Memoria proyecto [F-Alpha](https://finno51.github.io/SG/)
 
 ![](README/media/image1.png)
 
@@ -7,8 +7,6 @@
 ![](README/media/image2.png)
 
 > Resultado
-
-Jugable [aquí](https://finno51.github.io/SG/)
 
 En la propuesta de proyecto se indicó que, en caso de tener tiempo, se
 implementarían corredores IA y antigravedad. En el proceso de
