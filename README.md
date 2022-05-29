@@ -158,20 +158,20 @@ aspecto realista. También se ha implementado la clase LensFlare para
 un mejor efecto.
 
 >Problemas:
-Aparte de LensFlare, también se intentó que el PointLight emitiese
-sombras. Se implementó todo lo necesario: las flags de los objetos 3D
-para que pudiesen recibir y proyectar sombras, activar la matriz de
-sombras del renderer, activar la emisión de sombras de la luz, etc.
-Por alguna razón que desconocemos, seguía sin funcionar. Sospechamos
-que es porque la nave y la ciudad son objetos importados.
+>Aparte de LensFlare, también se intentó que el PointLight emitiese
+>sombras. Se implementó todo lo necesario: las flags de los objetos 3D
+>para que pudiesen recibir y proyectar sombras, activar la matriz de
+>sombras del renderer, activar la emisión de sombras de la luz, etc.
+>Por alguna razón que desconocemos, seguía sin funcionar. Sospechamos
+>que es porque la nave y la ciudad son objetos importados.
 
-Por otro lado, el LensFlare tuvo sus propios problemas. Al
-implementarlo, en lugar del efecto deseado se veía un cuadrado negro
-en su lugar, además de un error de WebGL en terminal. Al final resultó
-que la solución era activar el canal alfa en el renderer.
+>Por otro lado, el LensFlare tuvo sus propios problemas. Al
+>implementarlo, en lugar del efecto deseado se veía un cuadrado negro
+>en su lugar, además de un error de WebGL en terminal. Al final resultó
+>que la solución era activar el canal alfa en el renderer.
 
-![](README/media/image12.png)
-![](README/media/image13.png)
+>![](README/media/image12.png)
+>![](README/media/image13.png)
 
 ## Turbo y caída
 
