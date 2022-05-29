@@ -1,4 +1,4 @@
-# Memoria proyecto [F-Alpha](https://finno51.github.io/SG/)
+# README de [F-Alpha](https://finno51.github.io/SG/)
 
 ![](README/media/image1.png)
 
