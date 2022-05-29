@@ -1,11 +1,11 @@
 > **Memoria proyecto F-Alpha**
 
-![](.README/media/image1.png){width="5.5625in"
+![](README/media/image1.png){width="5.5625in"
 height="3.9055555555555554in"}
 
 Inspiración
 
-![](.README/media/image2.png){width="5.5625in"
+![](README/media/image2.png){width="5.5625in"
 height="3.136111111111111in"}
 
 Resultado
@@ -24,7 +24,7 @@ Jugable
 >
 > **Picker con raycast**
 
-![](.README/media/image3.png){width="2.5in"
+![](README/media/image3.png){width="2.5in"
 height="1.9791666666666667in"}
 
 > Lo primero que aparece en pantalla es la nave de lado sobre un fondo
@@ -42,7 +42,7 @@ height="1.9791666666666667in"}
 >
 > **Cuenta atrás con Tween**
 
-![](.README/media/image4.png){width="2.5930555555555554in"
+![](README/media/image4.png){width="2.5930555555555554in"
 height="1.7916666666666667in"}
 
 > La animación de la cuenta atrás empieza al hacer click en la nave. Al
@@ -66,7 +66,7 @@ height="1.7916666666666667in"}
 >
 > **Videos con THREE.VideoTexture**
 
-![](.README/media/image5.png){width="3.1569444444444446in"
+![](README/media/image5.png){width="3.1569444444444446in"
 height="1.6763877952755906in"}
 
 > Se crearon tres clases diferentes que implementan videos: grada.js,
@@ -80,7 +80,7 @@ height="1.6763877952755906in"}
 >
 > **TrackballControls**
 
-![](.README/media/image6.png){width="3.1347222222222224in"
+![](README/media/image6.png){width="3.1347222222222224in"
 height="1.9583333333333333in"}
 
 > Para añadir más funcionalidad con el ratón, se implementó la clase
@@ -112,7 +112,7 @@ height="1.9583333333333333in"}
 >
 > **Nave**
 
-![](.README/media/image9.png){width="2.9680555555555554in"
+![](README/media/image9.png){width="2.9680555555555554in"
 height="2.009721128608924in"}
 
 > El objeto complejo en nuestro proyecto es la nave. Está compuesto por
@@ -134,7 +134,7 @@ height="2.009721128608924in"}
 >
 > **Circuito y ciudad**
 
-![](.README/media/image10.png){width="2.1152777777777776in"
+![](README/media/image10.png){width="2.1152777777777776in"
 height="2.2916666666666665in"}
 
 > Al principio el circuito, generado con un ExtrudeGeometry(), era un
@@ -164,7 +164,7 @@ height="2.2916666666666665in"}
 >
 > **Iluminación y LensFlare**
 
-![](.README/media/image11.png){width="2.5319444444444446in"
+![](README/media/image11.png){width="2.5319444444444446in"
 height="2.4055555555555554in"}
 
 > La escena cuenta con dos tipos de iluminación principales: un
@@ -197,7 +197,7 @@ height="2.4055555555555554in"}
 
 > **Turbo y caída**
 
-![](.README/media/image14.png){width="3.176388888888889in"
+![](README/media/image14.png){width="3.176388888888889in"
 height="1.0305555555555554in"}
 
 > Aquí es donde más se juega con la cámara. En el turbo, se inicia una
@@ -218,7 +218,7 @@ height="1.0305555555555554in"}
 >
 > **Diagrama de clases**
 
-![](.README/media/image15.png){width="6.270833333333333in"
+![](README/media/image15.png){width="6.270833333333333in"
 height="4.697222222222222in"}
 
 > En el diagrama de clases no se puede apreciar con mucho detalle la
