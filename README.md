@@ -20,7 +20,7 @@ biblioteca nos ofrece.
 A continuación, por orden de aparición al ejecutar, se irán analizando
 los objetos implementados al proyecto:
 
-##Picker con raycast
+## Picker con raycast
 
 ![](README/media/image3.png)
 
@@ -37,7 +37,7 @@ intersectObject**s**(). El proceso de depuración por esto fue difícil,
 probamos gran cantidad de cosas pero nada funcionaba. En el momento
 que nos dimos cuenta del error funcionó al instante.
 
-##Cuenta atrás con Tween
+## Cuenta atrás con Tween
 
 ![](README/media/image4.png)
 
@@ -60,7 +60,7 @@ algunos obstáculos a la hora de desarrollar, debido a la diferencia
 entre contexto local y contexto global, pero al final se pudo
 implementar.
 
-##Videos con THREE.VideoTexture
+## Videos con THREE.VideoTexture
 
 ![](README/media/image5.png)
 
@@ -72,7 +72,7 @@ el usuario haya realizado un input en la página. Por eso, al darle
 click a la nave al principio se activa el flag que reproduce todos los
 videos en la escena.
 
-##TrackballControls
+## TrackballControls
 
 ![](README/media/image6.png)
 
@@ -97,7 +97,7 @@ siguientes imágenes:
 Una vez descubierto que el atributo target debía ser en contexto
 local, el proceso de depuración fue más cómodo.
 
-##Nave
+## Nave
 
 ![](README/media/image9.png)
 
@@ -118,7 +118,7 @@ otras flags gestionadas a mano. Esto ha llevado a que toda la
 animación fuese compleja de desarrollar, pero consiguió un resultado
 muy satisfactorio.
 
-##Circuito y ciudad
+## Circuito y ciudad
 
 ![](README/media/image10.png)
 
@@ -147,7 +147,7 @@ valla. Sospechamos que este problema es porque, al pasar el circuito
 por un CSG, este pasa a tener gran cantidad de vértices, lo cual
 conlleva una gran carga computacional.
 
-##Iluminación y LensFlare
+## Iluminación y LensFlare
 
 ![](README/media/image11.png)
 
@@ -175,7 +175,7 @@ que la solución era activar el canal alfa en el renderer.
 ![](README/media/image12.png)
 ![](README/media/image13.png)
 
-##Turbo y caída
+## Turbo y caída
 
 ![](README/media/image14.png)
 
@@ -193,7 +193,7 @@ tocaría usar la función setFocalLength(), la cual no entendíamos cómo
 funcionaba. Al final resulta que simplemente había que llamar a la
 función updateProjectionMatrix() después de modificar el atributo FOV.
 
-##Diagrama de clases
+## Diagrama de clases
 
 ![](README/media/image15.png)
 
