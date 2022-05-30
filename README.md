@@ -1,5 +1,5 @@
 ### Practicas de Informática Gráfica en la Universidad de Granada, curso 2021/2022
-#### Realizado por Jordi Conde Molina y Pablo Borrego Megas
+#### Realizado por Jordi Conde Molina y Pablo Borrego Megías
 
 # README de [F-Alpha](https://finno51.github.io/SG_SistemasGraficos/)
 
