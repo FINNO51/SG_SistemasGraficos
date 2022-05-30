@@ -205,3 +205,11 @@ destacados. Cabe destacar que pese al enorme número de "atributos"
 usados en las clases MyScene y firestringray se han seleccionados los
 más "importantes" y se han agrupado los menos importantes con nombres
 como por ejemplo "flagsPartida".
+
+## Modelos Importados
+Nave (ha sido editado con Tinkercad para extraer una de las naves):
+https://www.models-resource.com/gamecube/ssbm/model/5326/
+
+Ciudad:
+https://sketchfab.com/3d-models/imaginary-city-i-f6b1fae536c8490ca09b28db95586b1c
+
