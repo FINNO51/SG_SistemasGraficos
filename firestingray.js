@@ -127,11 +127,11 @@ class firestingray extends THREE.Object3D {
     
     this.cameraControl.target = this.modelo.position;
 
-    const listener = new THREE.AudioListener();
-    this.camera.add(listener);
+    this.listener = new THREE.AudioListener();
+    this.camera.add(this.listener);
     var that = this;
 
-    this.musica = new THREE.Audio(listener);
+    this.musica = new THREE.Audio(this.listener);
     const musicaLoader = new THREE.AudioLoader();
     musicaLoader.load('audio/musica.ogg', function(buffer){
       that.musica.setBuffer(buffer);
@@ -139,72 +139,72 @@ class firestingray extends THREE.Object3D {
       that.musica.setVolume(0.5);
     });
 
-    this.zoom = new THREE.Audio(listener);
+    this.zoom = new THREE.Audio(this.listener);
     musicaLoader.load('audio/zoom.ogg', function(buffer){
       that.zoom.setBuffer(buffer);
       that.zoom.setLoop(false);
       that.zoom.setVolume(0.5);
     });
 
-    this.three = new THREE.Audio(listener);
+    this.three = new THREE.Audio(this.listener);
     musicaLoader.load('audio/three.ogg', function(buffer){
       that.three.setBuffer(buffer);
       that.three.setLoop(false);
       that.three.setVolume(0.5);
     });
 
-    this.two = new THREE.Audio(listener);
+    this.two = new THREE.Audio(this.listener);
     musicaLoader.load('audio/two.ogg', function(buffer){
       that.two.setBuffer(buffer);
       that.two.setLoop(false);
       that.two.setVolume(0.5);
     });
 
-    this.one = new THREE.Audio(listener);
+    this.one = new THREE.Audio(this.listener);
     musicaLoader.load('audio/one.ogg', function(buffer){
       that.one.setBuffer(buffer);
       that.one.setLoop(false);
       that.one.setVolume(0.5);
     });
 
-    this.go = new THREE.Audio(listener);
+    this.go = new THREE.Audio(this.listener);
     musicaLoader.load('audio/go.ogg', function(buffer){
       that.go.setBuffer(buffer);
       that.go.setLoop(false);
       that.go.setVolume(0.6);
     });
 
-    this.motor = new THREE.Audio(listener);
+    this.motor = new THREE.Audio(this.listener);
     musicaLoader.load('audio/motor.ogg', function(buffer){
       that.motor.setBuffer(buffer);
       that.motor.setLoop(true);
       that.motor.setVolume(0.1);
     });
-    this.derrape = new THREE.Audio(listener);
+    this.derrape = new THREE.Audio(this.listener);
     musicaLoader.load('audio/derrape.ogg', function(buffer){
       that.derrape.setBuffer(buffer);
       that.derrape.setLoop(true);
       that.derrape.setVolume(0.1);
     });
-    this.explotion = new THREE.Audio(listener);
+    this.explotion = new THREE.Audio(this.listener);
     musicaLoader.load('audio/explosion.ogg', function(buffer){
       that.explotion.setBuffer(buffer);
       that.explotion.setLoop(false);
       that.explotion.setVolume(0.5);
     });
-    this.gameover = new THREE.Audio(listener);
+    this.gameover = new THREE.Audio(this.listener);
     musicaLoader.load('audio/gameover.ogg', function(buffer){
       that.gameover.setBuffer(buffer);
       that.gameover.setLoop(false);
       that.gameover.setVolume(0.5);
     });
-    this.choque = new THREE.Audio(listener);
+    this.choque = new THREE.Audio(this.listener);
     musicaLoader.load('audio/choque.ogg', function(buffer){
       that.choque.setBuffer(buffer);
       that.choque.setLoop(true);
       that.choque.setVolume(0.2);
     });
-    this.win1 = new THREE.Audio(listener);
+    this.win1 = new THREE.Audio(this.listener);
     musicaLoader.load('audio/win.ogg', function(buffer){
       that.win1.setBuffer(buffer);
       that.win1.setLoop(true);
