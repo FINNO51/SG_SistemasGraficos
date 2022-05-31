@@ -948,8 +948,6 @@ class MyScene extends THREE.Scene {
     var raycaster = new THREE.Raycaster();
     raycaster.setFromCamera(mouse, this.nave1.camera);
     var pickedObjects = raycaster.intersectObject(this.nave2.modelo);
-    if(pickedObjects.length == 0)
-      var pickedObjects = raycaster.intersectObject(this.nave2.aleron);
 
     console.log(pickedObjects.length);
   
@@ -963,7 +961,11 @@ class MyScene extends THREE.Scene {
 }
 
 
+var un_mute = document.getElementById('un-mute');
 
+un_mute.onclick = function() {
+   alert('toggle player here');
+};
 
 
 
@@ -1008,6 +1010,16 @@ scene.add( skybox );
   window.addEventListener("keydown", (event)=> scene.onKeyDown(event));
   window.addEventListener("keyup", (event)=> scene.onKeyUp(event));
   window.addEventListener("mousedown", (event)=>scene.onDocumentMouseDown(event));
+
+  var un_mute = document.getElementById('un-mute');
+
+  un_mute.onclick = function() {
+    if(scene.nave1.listener.getMasterVolume() == 1)
+      scene.nave1.listener.setMasterVolume(0);
+    else
+      scene.nave1.listener.setMasterVolume(1);
+  };
+
   
   
   // Que no se nos olvide, la primera visualización.
